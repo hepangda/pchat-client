@@ -44,3 +44,5 @@ pchat-server
 # Database
 database_connstr.h
 
+# CTags
+tags.*
