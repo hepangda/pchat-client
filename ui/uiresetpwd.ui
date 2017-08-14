@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UIResetpwd</class>
+ <widget class="QWidget" name="UIResetpwd">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>454</width>
+    <height>352</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PChat 找回密码</string>
+  </property>
+  <widget class="QLineEdit" name="txtUsername">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>40</y>
+     <width>231</width>
+     <height>32</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtPasswd">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>90</y>
+     <width>231</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="placeholderText">
+    <string>新密码应不少于8位</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtChkpasswd">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>140</y>
+     <width>231</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string>请重复密码</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="txtAns">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>240</y>
+     <width>201</width>
+     <height>32</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cbxQst">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>190</y>
+     <width>201</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>你父亲的职业？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你父亲的姓名？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你的学号(工号)？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你母亲的生日？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>小学班主任名字？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你配偶的姓名？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你配偶的职业？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>初中班主任名字？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你的出生地？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你母亲的职业？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你母亲的姓名？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你父亲的生日？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>你配偶的生日？</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>高中班主任名字？</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="lbl_username">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>40</y>
+     <width>71</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;用户名：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_passwd">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>90</y>
+     <width>61</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;新密码：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_chkpwd">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>140</y>
+     <width>101</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;重复新密码：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_qst">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>190</y>
+     <width>121</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;找回密码问题：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_ans">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>240</y>
+     <width>161</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;找回密码答案：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnRegister">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>290</y>
+     <width>211</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确认信息无误，重置密码</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnCancel">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>290</y>
+     <width>103</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>退出重置</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
