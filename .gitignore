@@ -46,3 +46,6 @@ database_connstr.h
 
 # CTags
 tags.*
+
+# Debug
+build-pchat-client-Desktop-Debug/*
