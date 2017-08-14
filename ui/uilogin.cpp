@@ -9,9 +9,15 @@
 #include<portal/network.h>
 #include<package.h>
 #include<iostream>
+#include<service.h>
+#include<include/uimainchat.h>
+
 using namespace libportal;
 using namespace std;
+
+EXTERN_SRV_USRID
 extern TCPSocket ipconn;
+
 
 UILogin::UILogin(QWidget *parent) :
     QWidget(parent),
@@ -67,6 +73,10 @@ void UILogin::on_btnLogin_clicked()
     reader.parse(recvpkg.jsdata, rev);
     if (rev["res"].asInt() == 0) {
         QMessageBox::information(NULL, "PChat", "登录成功！", QMessageBox::Ok, QMessageBox::Ok);
+        g_LoginIdentity = rev["un"].asString();
+        UIMainchat *mainchat = new UIMainchat;
+        mainchat->show();
+        close();
     } else {
         QMessageBox::information(NULL, "result", "登录失败！", QMessageBox::Ok, QMessageBox::Ok);
     }
@@ -76,4 +86,9 @@ void UILogin::on_btnForget_clicked()
 {
     UIResetpwd *rst = new UIResetpwd;
     rst->show();
+}
+
+void UILogin::on_btnExit_clicked()
+{
+    exit(0);
 }

@@ -1,3 +1,4 @@
 #pragma once
 #include<string>
-#include<atomic>
+
+#define EXTERN_SRV_USRID extern std::string g_LoginIdentity;

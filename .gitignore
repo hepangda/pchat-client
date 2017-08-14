@@ -49,3 +49,9 @@ tags.*
 
 # Debug
 build-pchat-client-Desktop-Debug/*
+
+# Projects
+pchat-client.pro.user
+
+# Qt Creator File
+*.autosave

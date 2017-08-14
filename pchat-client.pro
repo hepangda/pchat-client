@@ -34,7 +34,8 @@ SOURCES += \
     pchat.cpp \
     ui/uilogin.cpp \
     ui/uiregister.cpp \
-    ui/uiresetpwd.cpp
+    ui/uiresetpwd.cpp \
+    ui/uimainchat.cpp
 
 HEADERS += \
     include/fpkg.h \
@@ -44,7 +45,8 @@ HEADERS += \
     include/watchdog.h \
     include/uilogin.h \
     include/uiregister.h \
-    include/uiresetpwd.h
+    include/uiresetpwd.h \
+    include/uimainchat.h
 
 #FORMS +=
 
@@ -59,4 +61,5 @@ DEPENDPATH += $$PWD/../libportal/include
 FORMS += \
     ui/uilogin.ui \
     ui/uiregister.ui \
-    ui/uiresetpwd.ui
+    ui/uiresetpwd.ui \
+    ui/uimainchat.ui

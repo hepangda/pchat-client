@@ -22,6 +22,8 @@ private slots:
 
     void on_btnForget_clicked();
 
+    void on_btnExit_clicked();
+
 private:
     Ui::UILogin *ui;
     std::string JsonlizeUI();
