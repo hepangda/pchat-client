@@ -14,9 +14,15 @@ class UIMainchat : public QMainWindow
 public:
     explicit UIMainchat(QWidget *parent = 0);
     ~UIMainchat();
+    Ui::UIMainchat *getUI() { return ui; }
+    void puiSetStatus(QString status);
 
+public slots:
+    void srvAddFriend();
 private:
     Ui::UIMainchat *ui;
+
+
 };
 
 #endif // UIMAINCHAT_H

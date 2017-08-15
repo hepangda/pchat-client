@@ -6,29 +6,217 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>795</width>
+    <height>607</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="txtMsg">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>10</y>
+      <width>551</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPlainTextEdit" name="txtSend">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>480</y>
+      <width>481</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnSend">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>480</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>发送</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>211</width>
+      <height>531</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tabFriend">
+     <attribute name="title">
+      <string>好友列表</string>
+     </attribute>
+     <widget class="QListWidget" name="lstFriend">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>201</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::ActionsContextMenu</enum>
+      </property>
+      <property name="currentRow">
+       <number>-1</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tabGroup">
+     <attribute name="title">
+      <string>群列表</string>
+     </attribute>
+     <widget class="QListView" name="lstGroup">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>201</width>
+        <height>251</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QListView" name="lstGroupMember">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>260</y>
+        <width>201</width>
+        <height>221</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="lblVersion">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>550</y>
+      <width>161</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PChat Version 1.00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblStatus">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>550</y>
+      <width>601</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;font color=&quot;red&quot;&gt;&lt;b&gt;nihao&lt;/b&gt;&lt;/font&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>29</height>
+     <width>795</width>
+     <height>30</height>
     </rect>
    </property>
+   <widget class="QMenu" name="mnuSystem">
+    <property name="title">
+     <string>系统消息</string>
+    </property>
+    <addaction name="actMsgbox"/>
+    <addaction name="separator"/>
+    <addaction name="actQuit"/>
+   </widget>
+   <widget class="QMenu" name="mnuTools">
+    <property name="title">
+     <string>功能选项</string>
+    </property>
+    <addaction name="actAddFriend"/>
+    <addaction name="separator"/>
+    <addaction name="actCreateGroup"/>
+    <addaction name="actJoinGroup"/>
+    <addaction name="separator"/>
+    <addaction name="actChatrecord"/>
+    <addaction name="separator"/>
+    <addaction name="actFileTransfer"/>
+   </widget>
+   <addaction name="mnuSystem"/>
+   <addaction name="mnuTools"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar">
-   <property name="autoFillBackground">
-    <bool>false</bool>
+  <action name="action">
+   <property name="text">
+    <string>创建群</string>
    </property>
-  </widget>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>加入群</string>
+   </property>
+  </action>
+  <action name="actAddFriend">
+   <property name="text">
+    <string>添加新好友</string>
+   </property>
+  </action>
+  <action name="actCreateGroup">
+   <property name="text">
+    <string>创建群</string>
+   </property>
+  </action>
+  <action name="actJoinGroup">
+   <property name="text">
+    <string>加入群</string>
+   </property>
+  </action>
+  <action name="actChatrecord">
+   <property name="text">
+    <string>聊天记录</string>
+   </property>
+  </action>
+  <action name="actMsgbox">
+   <property name="text">
+    <string>消息盒子</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="text">
+    <string>退出登录</string>
+   </property>
+  </action>
+  <action name="actFileTransfer">
+   <property name="text">
+    <string>文件传输</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

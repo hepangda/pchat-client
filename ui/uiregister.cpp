@@ -20,6 +20,7 @@ UIRegister::UIRegister(QWidget *parent) :
     ui->btnRegister->setShortcut(QKeySequence::InsertParagraphSeparator);
     ui->btnRegister->setShortcut(Qt::Key_Enter);
     ui->btnRegister->setShortcut(Qt::Key_Return);
+
 }
 
 UIRegister::~UIRegister()

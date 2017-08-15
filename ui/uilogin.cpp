@@ -11,13 +11,14 @@
 #include<iostream>
 #include<service.h>
 #include<include/uimainchat.h>
-
+#include<condition_variable>
 using namespace libportal;
 using namespace std;
 
 EXTERN_SRV_USRID
 extern TCPSocket ipconn;
-
+extern UIMainchat *mainchat;
+extern condition_variable pcv_cansolve;
 
 UILogin::UILogin(QWidget *parent) :
     QWidget(parent),
@@ -74,7 +75,7 @@ void UILogin::on_btnLogin_clicked()
     if (rev["res"].asInt() == 0) {
         QMessageBox::information(NULL, "PChat", "登录成功！", QMessageBox::Ok, QMessageBox::Ok);
         g_LoginIdentity = rev["un"].asString();
-        UIMainchat *mainchat = new UIMainchat;
+        pcv_cansolve.notify_all();
         mainchat->show();
         close();
     } else {
