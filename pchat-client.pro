@@ -35,20 +35,19 @@ SOURCES += \
     ui/uilogin.cpp \
     ui/uiregister.cpp \
     ui/uiresetpwd.cpp \
-    ui/uimainchat.cpp
+    ui/uimainchat.cpp \
+    ui/uicr.cpp
 
 HEADERS += \
     include/fpkg.h \
     include/package.h \
     include/service.h \
-    include/ui.h \
     include/watchdog.h \
     include/uilogin.h \
     include/uiregister.h \
     include/uiresetpwd.h \
-    include/uimainchat.h
-
-#FORMS +=
+    include/uimainchat.h \
+    include/uicr.h
 
 
 
@@ -62,4 +61,5 @@ FORMS += \
     ui/uilogin.ui \
     ui/uiregister.ui \
     ui/uiresetpwd.ui \
-    ui/uimainchat.ui
+    ui/uimainchat.ui \
+    ui/uicr.ui

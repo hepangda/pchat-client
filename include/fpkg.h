@@ -10,8 +10,8 @@
 
 #define EXTERN_LISTS extern std::map<std::string, std::string> mUnString; \
                      extern std::map<std::string, std::string> mGnString; \
-                     extern std::map<int, std::string> friendList;\
-                     extern std::map<int, std::string> groupList;\
+                     extern std::map<int, std::pair<std::string, int>> friendList;\
+                     extern std::map<int, std::pair<std::string, int>> groupList;\
                      extern std::map<std::string, std::map<int, std::string>> groupmemberList;\
 
 void network_module();
@@ -49,3 +49,5 @@ int dpkg_dismute_res(pkg_t pkg);
 int dpkg_fetchcr_res(pkg_t pkg);
 int dpkg_crgrp_res(pkg_t pkg);
 int dpkg_exgrp_pcnot(pkg_t pkg);
+int dpkg_engrp_pcnot(pkg_t pkg);
+int dpkg_fch(pkg_t pkg);

@@ -77,6 +77,7 @@ void UILogin::on_btnLogin_clicked()
         g_LoginIdentity = rev["un"].asString();
         pcv_cansolve.notify_all();
         mainchat->show();
+        mainchat->onInit();
         close();
     } else {
         QMessageBox::information(NULL, "result", "登录失败！", QMessageBox::Ok, QMessageBox::Ok);
@@ -91,5 +92,5 @@ void UILogin::on_btnForget_clicked()
 
 void UILogin::on_btnExit_clicked()
 {
-    exit(0);
+    terminate();
 }

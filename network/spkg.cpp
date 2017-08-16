@@ -9,6 +9,7 @@
 #include<functional>
 #include<portal/network.h>
 #include<service.h>
+#include<iostream>
 using namespace std;
 using namespace libportal;
 
@@ -29,17 +30,21 @@ void spkg_distribute() {
     while (WATCHDOG_SPKG) {
         unique_lock<mutex> pul_sendchanged(pmtx_sendchanged);
         pcv_sendchanged.wait(pul_sendchanged);
-        pkglk_send.lock();
-        if (qpkgSend.empty()) {
-            pkglk_send.unlock();
-            continue;
-        }
-        pkg_t thispkg = qpkgSend.front();
-        qpkgSend.pop();
-        pkglk_send.unlock();
 
-        spkg_send(thispkg);
+        while (true) {
+            pkglk_send.lock();
+            if (!qpkgSend.empty()) {
+                pkg_t thispkg = qpkgSend.front();
+                qpkgSend.pop();
+                pkglk_send.unlock();
+                spkg_send(thispkg);
+            } else {
+                pkglk_send.unlock();
+                break;
+            }
+        }
     }
+
 }
 
 int spkg_send(pkg_t pkg) {
